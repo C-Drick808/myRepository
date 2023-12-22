@@ -8,7 +8,7 @@ public class DateTask {
 
 // The no-args constructor
 public DateTask() {
-    
+    setDate(07, 05, 2001);
 }
 // Constructor that takes 3 arguments
 public DateTask(int m, int d, int y) {
