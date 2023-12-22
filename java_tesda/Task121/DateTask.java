@@ -37,7 +37,7 @@ public static void leapYears() {
     }
 }
 public int getDay() {
-    return ;
+    return this.day;
     
 }
 public void setDay(int day) {
