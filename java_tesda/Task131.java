@@ -35,6 +35,7 @@ public class Task131 {
         Afritada meal4 = new Caldereta();
       // display all ingredients at every object
         meal1.showIngredients();
+        meal4.showIngredients();
 
       
         
