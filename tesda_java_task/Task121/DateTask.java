@@ -8,7 +8,8 @@ public class DateTask {
 
 // The no-args constructor
 public DateTask() {
-    setDate(07, 05, 2001);
+
+    System.out.println(this.month);
 }
 // Constructor that takes 3 arguments
 public DateTask(int m, int d, int y) {
@@ -30,25 +31,27 @@ public void setDate(int m, int d, int y) {
         month = (byte) 0;
     }
 }
-public static void leapYears() {
+public void leapYears() {
     for (int i = 1980; i <= 2023; i = i + 4) {
         if (((i % 4 == 0) && (i % 100 != 0)) || (i % 400 == 0))
             System.out.println("The year " + i + " is a leap year");
     }
 }
 public int getDay() {
-    return this.day;
+    int numDay = 05;
+    setDay(numDay);
+    return numDay;
     
 }
 public void setDay(int day) {
     if (valid(day, month, year)) {
         this.day = (byte) day;
     }
-    
 }
 public int getMonth() {
-    return this.month;
-    
+    int numMonth = 07;
+    setMonth(numMonth);
+    return this.month = (byte) numMonth;
 }
 public void setMonth(int month) {
     if (valid(day, month, year)) {
@@ -59,7 +62,9 @@ public void setMonth(int month) {
     }
 }
 public int getYear() {
-    return this.year;
+    int numYear = 2001;
+    setYear(numYear);
+    return this.year = (short) numYear;
 }
 public void setYear(int year) {
     if (valid(day, month, year)) {
