@@ -7,7 +7,7 @@ public class MyDate {
         System.out.println(date2.toString());
        // display leapyears
        DateTask showLeapYears = new DateTask();
-       showLeapYears.leapYears();
+       DateTask.leapYears();
        
     }
 }

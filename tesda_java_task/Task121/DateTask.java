@@ -47,7 +47,7 @@ public void setDay(int day) {
     
 }
 public int getMonth() {
-    return month;
+    return this.month;
     
 }
 public void setMonth(int month) {
@@ -59,7 +59,7 @@ public void setMonth(int month) {
     }
 }
 public int getYear() {
-    return year;
+    return this.year;
 }
 public void setYear(int year) {
     if (valid(day, month, year)) {
