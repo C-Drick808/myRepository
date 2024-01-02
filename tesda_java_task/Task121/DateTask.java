@@ -1,93 +1,88 @@
 package Task121;
 public class DateTask {
-   // instance variables
- byte day;
- byte month;
- short year;
+    // instance variables
+    byte day;
+    byte month;
+    short year;
 // Constructors:
 
-// The no-args constructor
-public DateTask() {
+    // The no-args constructor
+    public DateTask() {
 
-    System.out.println(this.month);
-}
-// Constructor that takes 3 arguments
-public DateTask(int m, int d, int y) {
-    setDate(m, d, y);
-}
-// Methods
-public String toString() {
-    return month + "-" + day + "-" + year;
-}
-public void setDate(int m, int d, int y) {
-    if (valid(d, m, y)) {
-        day = (byte) d;
-        year = (short) y;
-        month = (byte) m;
     }
-    else{
-        day = (byte) 0;
-        year = (short) 0;
-        month = (byte) 0;
+    // Constructor that takes 3 arguments
+    public DateTask(int m, int d, int y) {
+        setDate(m,d,y);
     }
-}
-public void leapYears() {
-    for (int i = 1980; i <= 2023; i = i + 4) {
-        if (((i % 4 == 0) && (i % 100 != 0)) || (i % 400 == 0))
-            System.out.println("The year " + i + " is a leap year");
+    // Methods
+    public String toString() {
+        return month + "-" + day + "-" + year;
     }
-}
-public int getDay() {
-    int numDay = 05;
-    setDay(numDay);
-    return numDay;
-    
-}
-public void setDay(int day) {
-    if (valid(day, month, year)) {
-        this.day = (byte) day;
+    public void setDate(int m, int d, int y) {
+
+
+        if (valid(d, m, y)) {
+            day = (byte) d;
+            year = (short) y;
+            month = (byte) m;
+        }
+        else{
+            day = (byte) 0;
+            year = (short) 0;
+            month = (byte) 0;
+        }
     }
-}
-public int getMonth() {
-    int numMonth = 07;
-    setMonth(numMonth);
-    return this.month = (byte) numMonth;
-}
-public void setMonth(int month) {
-    if (valid(day, month, year)) {
-        this.month = (byte) month;
+    public static void leapYears() {
+        for (int i = 1980; i <= 2023; i = i + 4) {
+            if (((i % 4 == 0) && (i % 100 != 0)) || (i % 400 == 0))
+                System.out.println("The year " + i + " is a leap year");
+        }
     }
-    else{
-        this.month = (byte) 0;
+    public int getDay() {
+        return day;
     }
-}
-public int getYear() {
-    int numYear = 2001;
-    setYear(numYear);
-    return this.year = (short) numYear;
-}
-public void setYear(int year) {
-    if (valid(day, month, year)) {
-        this.year = (short) year;
+    public void setDay(int newDay) {
+        if (valid(day, month, year)) {
+            this.day = (byte) newDay;
+        }
+
     }
-    else{
-        this.year = (short) 0;
+    public int getMonth() {
+        return month;
     }
-}
-private boolean valid(int day, int month, int year) {
-    if (day > 31 || day < 1 || month > 12 || month < 1 || year < 1)  {
-        System.out.println("Attempting to create a non-valid date " +month + "/" + day + "/" + year);
-        return false;
+    public void setMonth(int newMonth) {
+        if (valid(day, month, year)) {
+            this.month = (byte) newMonth;
+        }
+        else{
+            //this.month = (byte) 0;
+        }
     }
-    switch (month) {
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            return (day <= 30);
-        case 2:
-            return day <= 28 || (day == 29 && year % 4 == 0);
+    public int getYear() {
+        return year;
     }
-    return true;
-}
+    public void setYear(int newYear) {
+        if (valid(day, month, year)) {
+            this.year = (short) newYear;
+        }
+        else{
+            //this.year = (short) 0;
+        }
+    }
+    private boolean valid(int day, int month, int year) {
+        if (month > 12 || month < 1 || day > 31 || day < 1 || year < 1)  {
+            System.out.println("Attempting to create a non-valid date " +month + "/" + day + "/" + year);
+            return false;
+        }
+        switch (month) {
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return (day <= 30);
+            case 2:
+                return day <= 28 || (day == 29 && year % 4 == 0);
+        }
+        return true;
+    }
 }
