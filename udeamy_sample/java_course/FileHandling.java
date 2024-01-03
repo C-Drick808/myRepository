@@ -5,6 +5,7 @@ public class FileHandling {
 
    public static void main(String[] args) throws IOException {
 
+      
       FileInputStream fileIn = null;
       FileOutputStream fileOut = null;
       try{
