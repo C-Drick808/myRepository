@@ -1,8 +1,6 @@
 package java_tesda;
-
 public class OddOrEvenTask {
     static int check_number = 10;
-
     public static void main(String[] args) {
 
         for (int i = 1; i<= 10; i++) {
