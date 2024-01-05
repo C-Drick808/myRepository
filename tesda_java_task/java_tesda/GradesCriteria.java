@@ -12,20 +12,27 @@ public class GradesCriteria {
         float subjEnglish = sc.nextFloat();
         System.out.print("Enter your grade in Science: ");
         float subjScience = sc.nextFloat();
-        double grades = (subjMath + subjEnglish + subjScience) / 3;
+        System.out.print("Enter your grade in Filipino: ");
+        float subjFilipino = sc.nextFloat();
+        System.out.print("Enter your grade in Araling Panlipunan: ");
+        float subjAP = sc.nextFloat();
+        System.out.print("Enter your grade in M.A.P.E.H: ");
+        float subMAPEH = sc.nextFloat();
+        double grades = (subjMath + subjEnglish + subjScience +
+                subjFilipino + subjAP + subMAPEH) / 6;
         float rndOff = Math.round(grades);
         int finalGrades = (int) rndOff;
-        System.out.println("\n • Final Grade: " + finalGrades);
+        System.out.println("\n • Average Grade: " + finalGrades);
         if (finalGrades >= 90){
-            System.out.println("Grade A");
+            System.out.println(" Your grade average " + finalGrades + " is A+ Grade");
         }else if (finalGrades >= 80){
-            System.out.println("Grade B");
+            System.out.println(" Your grade average " + finalGrades + " is B+ Grade");
         } else if (finalGrades >= 70) {
-            System.out.println("Grade C");
+            System.out.println(" Your grade average " + finalGrades + " is C- Grade");
         } else if (finalGrades >= 60) {
-            System.out.println("Grade D");
+            System.out.println(" Your grade average " + finalGrades + " is D Grade");
         } else{
-            System.out.println("Grade F");
+            System.out.println(" Your grade average " + finalGrades + " is F Grade");
         }
     }
 }
