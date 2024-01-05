@@ -23,16 +23,15 @@ public class GradesCriteria {
         float rndOff = Math.round(grades);
         int finalGrades = (int) rndOff;
         System.out.println("\n • Average Grade: " + finalGrades);
-        if (finalGrades >= 90){
+        if (finalGrades >= 90)
             System.out.println(" Your grade average " + finalGrades + " is A+ Grade");
-        }else if (finalGrades >= 80){
+        else if (finalGrades >= 80)
             System.out.println(" Your grade average " + finalGrades + " is B+ Grade");
-        } else if (finalGrades >= 70) {
+        else if (finalGrades >= 70)
             System.out.println(" Your grade average " + finalGrades + " is C- Grade");
-        } else if (finalGrades >= 60) {
+        else if (finalGrades >= 60)
             System.out.println(" Your grade average " + finalGrades + " is D Grade");
-        } else{
+        else
             System.out.println(" Your grade average " + finalGrades + " is F Grade");
-        }
     }
 }
